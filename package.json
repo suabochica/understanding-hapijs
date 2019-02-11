@@ -1,0 +1,23 @@
+{
+  "name": "understanding-hapijs",
+  "version": "1.0.0",
+  "description": "Repository to explore the purpose of hapijs",
+  "main": "server.js",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suabochica/understanding-hapijs.git"
+  },
+  "author": "Sergio L. Benítez D.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suabochica/understanding-hapijs/issues"
+  },
+  "homepage": "https://github.com/suabochica/understanding-hapijs#readme"
+}
