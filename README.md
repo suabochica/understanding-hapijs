@@ -18,6 +18,34 @@ Repository to explore the purpose of Hapi.js
 ## Hapi vs Express
 Basically, the difference between Hapi and Express is that Express is very minimal. You need to add more package for several functionalities white Hapi, on the other hand, provides a robust API for several functionalities out-of-the-box.
 
+## Building a Dog API With Hapi
+This is an API to manage a collection of dogs. The core API principles you should be aware of:
+
++ REST describes how to make resources available in a client-server relationship.
++ Data should be organized around resources.
++ API should respond to common HTTP verbs, `GET`, `POST`,`PUT`, `PATCH` and `DELETE`.
++ Server should be stateless
+
+Also, we want different API endpoints for CRUD operations.
+
++ Get all dogs - `GET /dogs`
++ Get one dogs - `GET /dog/11`
++ Create a dogs - `POST /dogs`
++ Edit a dog - `PUT /dogs/11`
++ Delete a dog `PUT /dogs/11`
+
+And finally, a dog have the following attributes:
+
++ name
++ breed
++ age
++ image
+
+The project structure have to folders: `controllers` and `models`
+
++ The `controllers` folder will house all the logic of saving and retrieving data from the database
++ The `models` folder will house the schema for the dog API
+
 ## Refs
 + [Hapi.js Framework Chars Course _version outdated_](https://www.youtube.com/watch?v=2lprC0yYeFw)
 + [Developing a RESTful AP with Hapi](https://auth0.com/blog/developing-restful-apis-with-hapijs/)

@@ -4,7 +4,8 @@
   "description": "Repository to explore the purpose of hapijs",
   "main": "server.js",
   "dependencies": {
-    "hapi": "^18.1.0"
+    "hapi": "^18.1.0",
+    "mongoose": "^5.4.11"
   },
   "devDependencies": {},
   "scripts": {
