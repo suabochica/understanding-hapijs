@@ -4,7 +4,7 @@ const Hapi = require('hapi')
 const mongoose = require('mongoose')
 
 const DogController = require('./src/controllers/dog.controller')
-const mongoDBUrl = 'mongodb://localhost:27017/dogapi'
+const MongoDBUrl = 'mongodb://localhost:27017/dbdogs'
 
 
 // Create a server with a host and port
@@ -29,13 +29,13 @@ server.route({
 server.route({
     method: 'POST',
     path: '/dogs',
-    handler: DogController.create
+    handler: DogController.post
 });
 
 server.route({
     method: 'PUT',
     path: '/dogs/{id}',
-    handler: DogController.create
+    handler: DogController.put
 });
 
 server.route({
@@ -49,11 +49,12 @@ const start =  async function() {
     try {
         await server.start();
 
-        mongoose.connect(MongoDBUrl, {}).then(() => {
+        mongoose.connect(MongoDBUrl, {useNewUrlParser: true}).then(() => {
             console.log('Connected to the Mongo Server')
         }, (error) => {
             console.log(error)
         })
+        mongoose.set('useCreateIndex', true)
 
         console.log(`Server running at: ${server.info.uri}`)
     }
@@ -61,8 +62,6 @@ const start =  async function() {
         console.log(error);
         process.exit(1);
     }
-
-    console.log('Server running at:', server.info.uri);
 };
 
 start();

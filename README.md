@@ -47,5 +47,5 @@ The project structure have to folders: `controllers` and `models`
 + The `models` folder will house the schema for the dog API
 
 ## Refs
-+ [Hapi.js Framework Chars Course _version outdated_](https://www.youtube.com/watch?v=2lprC0yYeFw)
++ ~[Hapi.js Framework Crash Course _version outdated_](https://www.youtube.com/watch?v=2lprC0yYeFw)~
 + [Developing a RESTful AP with Hapi](https://auth0.com/blog/developing-restful-apis-with-hapijs/)
