@@ -46,6 +46,70 @@ The project structure have to folders: `controllers` and `models`
 + The `controllers` folder will house all the logic of saving and retrieving data from the database
 + The `models` folder will house the schema for the dog API
 
+## Database
+To create the `dbdogs` database you have to install [MongoDB Server](https://www.mongodb.com/download-center/community) and for an intuitive navigation in the database please install GUI(Graphic User Interface) [MongoDB Compass Community](https://www.mongodb.com/products/compass).
+
++ Database: MongoDB
+
+### Database Information
++ Database name: `dbdogs`
++ Database user: n/a
++ Database password: n/a
+
+### Mongo Shell useful queries
+
+> **Note:** to enable the `mongo` command you have to add  your `{mongodb/installation/dir}/bin` to the `PATH` environment variable.
+
+Query to show users
+
+```
+show users
+```
+
+Query to show databases
+
+```
+show databases
+```
+
+Query to use a database
+
+```
+show use {database_name}
+```
+
+Query to show the database collections
+
+```
+show collections
+```
+
+Query to create a database collection
+
+```
+db.createCollection(dogs, {
+    autoIndexId: true
+})
+```
+
+Query to create a database collection
+
+```
+db.insert(dogs, {
+    autoIndexId: true
+})
+```
+Query to insert an object in a database collection
+
+```
+db.dogs.insert({
+   name: 'Tororo',
+   breed: 'Bernese Mountain',
+   age: 12,
+   image: 'https://images.dog.ceo/breeds/mountain-bernese/n02107683_4194.jpg'
+})
+```
+
 ## Refs
 + ~[Hapi.js Framework Crash Course _version outdated_](https://www.youtube.com/watch?v=2lprC0yYeFw)~
 + [Developing a RESTful AP with Hapi](https://auth0.com/blog/developing-restful-apis-with-hapijs/)
